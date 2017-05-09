@@ -8,7 +8,9 @@
     "copy-files": "cpy src/index.html dist",
     "clean-and-copy": "npm run clean-dist && npm run copy-files",
     "prestart": "npm run clean-and-copy",
-    "start": "webpack-dev-server --env.dev --hot"
+    "start": "webpack-dev-server --env.dev --hot",
+    "build": "webpack --env.dev",
+    "build:prod": "webpack --env.production -p"
   },
   "repository": {
     "type": "git",

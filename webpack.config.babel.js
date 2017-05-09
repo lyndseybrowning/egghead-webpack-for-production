@@ -11,6 +11,7 @@ export default (env) => {
     // base directory for resolving entry option
     context: resolve(__dirname, 'src'),
     devtool: env.production ? 'source-map' : 'eval',
+    bail: env.production,
     module: {
       loaders: [
         { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ }
